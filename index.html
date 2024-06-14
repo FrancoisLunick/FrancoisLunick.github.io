@@ -31,12 +31,25 @@
                 </div>
             </div>
 
-            <div class="dropdown_menu">
+            <div class="dropdown_menu open">
                 <li><a href="home">Home</a></li>
                 <li><a href="projects">Projects</a></li>
                 <li><a href="about me">About Me</a></li>
                 <li><a href="home">Contact</a></li>
             </div>
         </header>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function (){
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+            }
+        </script>
     </body>
 </html>
