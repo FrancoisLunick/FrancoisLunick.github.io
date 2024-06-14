@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 1;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -76,6 +76,17 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+/* HOME */
+section#home {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#000
+}
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
     .navbar .links {
@@ -89,5 +100,12 @@ header{
     .dropdown_menu{
         display: block;
     }
-    
+   
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
 }
