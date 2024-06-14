@@ -12,37 +12,7 @@
         referrerpolicy="no-referrer"/>
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="#">Lunick Francois Portfolio</a>
-                </div>
-                <ul class="links">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="projects">Projects</a></li>
-                    <li><a href="about me">About Me</a></li>
-                    <li><a href="home">Contact</a></li>
-                </ul>
-                <div class="social_btn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-                <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-
-            <div class="dropdown_menu open">
-                <li><a href="home">Home</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="about me">About Me</a></li>
-                <li><a href="home">Contact</a></li>
-                <li>
-                    <div class="social_btn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </div>
-                </li>
-            </div>
-        </header>
+        <header></header>
 
         <main>
             <section id="home">
@@ -53,17 +23,11 @@
             </section>
         </main>
 
-        <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
+        <footer>
+            <p>&copy; 2024 Lunick Francois. All rights reserved.</p>
+          </footer>
 
-            toggleBtn.onclick = function (){
-                dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('open')
-
-                toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-            }
-        </script>
+        <script src="toggleMenu.js"></script>
+        <script src="loadHeader.js"></script>
     </body>
 </html>
