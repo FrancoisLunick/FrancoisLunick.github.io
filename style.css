@@ -55,6 +55,26 @@ header{
     display: flex;
     gap: 2rem;
 }
+
+.navbar .toggle_btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Initially hide the toggle button */
+}
+
+.social_btn{
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.social_btn:hover{
+    scale: 1.10;
+    color: #000;
+}
+
+.social_btn:active{
+    scale: 0.95;
+}
 /* DROPDOWN MENU */
 .dropdown_menu{
     display: none;
@@ -91,9 +111,15 @@ section#home {
     text-align: center;
     color:#000
 }
+
+#home h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
-    .navbar .links {
+    .navbar .links,
+    .navbar .social_btn {
         display: none;
     }
 
