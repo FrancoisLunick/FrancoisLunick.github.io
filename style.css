@@ -15,7 +15,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
+/* ====== BODY STYLES ====== */
 body{
     height: 100vh;
     background-color: black;
@@ -37,7 +37,7 @@ a{
 a:hover{
     color: var(--blue-400);
 }
-/* HEADER */
+/* ====== HEADER STYLES ====== */
 header{
     position: relative;
     width: 100%;
@@ -86,11 +86,11 @@ header{
 .social_btn:active{
     scale: 0.95;
 }
-
+/* ====== FOOTER STYLES ====== */
 footer{
     color: var(--blue-100);
 }
-/* DROPDOWN MENU */
+/* ====== DROPDOWN MENU ====== */
 .dropdown_menu{
     display: none;
     position: absolute;
@@ -116,7 +116,7 @@ footer{
     justify-content: center;
 }
 
-/* HOME */
+/* ====== HOME SECTION ====== */
 section#home {
     height: calc(100vh - 60px);
     display: flex;
@@ -210,7 +210,7 @@ section#home {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-/* RESPONSIVE DESIGN */
+/* ====== RESPONSIVE DESIGN ====== */
 @media (max-width: 992px) {
     .navbar .links,
     .navbar .social_btn {
@@ -233,7 +233,7 @@ section#home {
         width: unset;
     }
 }
-
+/* ====== CONTAINER STYLES ====== */
 .container{
     max-width: 1440px;
     margin: auto;
@@ -246,7 +246,7 @@ section#home {
         padding-right: 30px;
     }
 }
-/* ABOUT */
+/* ====== ABOUT SECTION ====== */
 .aboutme{
     h1{
         font-size: 64px;
@@ -353,7 +353,7 @@ section#home {
         }
     }
 }
-
+/* ====== LOGOS SECTION ====== */
 .logos{
     background-color: var(--base-100);
     border-radius: 30px;
@@ -386,7 +386,7 @@ section#home {
         transform: translateX(-50%);
     }
 }
-
+/* ====== SKILLS SECTION ====== */
 .skills{
     .holder-blue{
         background-color: var(--blue-100);
@@ -420,7 +420,7 @@ section#home {
     }
     
 }
-
+/* ====== WORK EXPERIENCE SECTION ====== */
 .work-experience{
     .jobs{
         display: flex;
@@ -483,7 +483,7 @@ section#home {
         }
     }
 }
-
+/* ====== EDUCATION SECTION ====== */
 .education{
     .schools{
         display: flex;
@@ -547,7 +547,7 @@ section#home {
     }
 }
 
-/* CONTACT ME */
+/* ====== CONTACT ME SECTION ====== */
 .contactme{
     .container{
         width: 100%;
@@ -731,8 +731,7 @@ section#home {
         }
     }
 }
-/* PROJECTS */
-
+/* ====== PROJECTS SECTION ====== */
 .portfolio .container{
     .projects{
         display: flex;
@@ -818,6 +817,7 @@ section#home {
     width: 100%;
     display: block;
 }
+/* ====== ROW STYLES ====== */
 .row{
     display: flex;
     flex-wrap: wrap;
