@@ -22,6 +22,8 @@ body{
     background-image: url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
+    position: relative;
+    z-index: 1;
 }
 
 li{
@@ -71,6 +73,7 @@ header{
     font-size: 1.5rem;
     cursor: pointer;
     display: none; /* Initially hide the toggle button */
+    color: white;
 }
 
 .social_btn{
@@ -103,6 +106,7 @@ footer{
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
 }
 
 .dropdown_menu.open{
@@ -240,6 +244,7 @@ section#home {
     gap: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
+    z-index: 1;
 
     @media (max-width:1440px){
         padding-left: 30px;
@@ -744,6 +749,8 @@ section#home {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    position: relative;
+    z-index: 1;
 }
 .projects .container .project-item {
     flex: 1 1 calc(33.333% - 30px);
@@ -751,7 +758,8 @@ section#home {
     background-color: var(--base-100);
     padding: 30px;
     border-radius: 30px;
-    border: 6px solid var(--blue-400)
+    border: 6px solid var(--blue-400);
+    z-index: 1;
 }
 .projects .portfolio-heading{
     flex: 0 0 100%;
