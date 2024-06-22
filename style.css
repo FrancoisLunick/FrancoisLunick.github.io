@@ -487,6 +487,7 @@ section#home {
 .education{
     .schools{
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
         @media (max-width:1024px){
             flex-direction: column;
@@ -495,7 +496,13 @@ section#home {
             background-color: var(--base-100);
             padding: 30px;
             border-radius: 30px;
-            flex: 1;
+            flex: 1 1 calc(33.333% - 30px);
+            box-sizing: border-box;
+
+            @media (max-width: 1024px) {
+                flex: 1 1 100%;
+            }
+
             h3 {
                 margin-top: 20px;
                 margin-bottom: 10px;
@@ -732,90 +739,95 @@ section#home {
     }
 }
 /* ====== PROJECTS SECTION ====== */
-.portfolio .container{
-    .projects{
-        display: flex;
-        gap: 30px;
-        @media (max-width:1024px){
-            flex-direction: column;
-        }
-        article{
-            background-color: var(--base-100);
-            padding: 30px;
-            border-radius: 30px;
-            flex: 1;
-            h3 {
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-            div{
-                font-weight: 600;
-                margin-bottom: 5px;
-                color: var(--base-800);
-            }
-            p {
-                margin-bottom: 10px;
-            }
-            figure{
-                width:100%;
-                padding-top:56.25%;
-                overflow:hidden;
-                position:relative;
-                border-radius:15px;
-                img{
-                    position: absolute;
-                    top:0;
-                    left: 0;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: ease 3s all;
-                }
-                figcaption{
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background-color: rgba(0,0,0,0.5);
-                    color: var(--base-100);
-                    text-align: center;
-                    padding: 10px;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: ease 0.3s all;
-                }
 
-                &:hover{
-                    figcaption{
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
-            }
-        }
-    }
+.projects .container .project-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-.portfolio .portfolio-heading{
+.projects .container .project-item {
+    flex: 1 1 calc(33.333% - 30px);
+    margin-bottom: 30px;
+    background-color: var(--base-100);
+    padding: 30px;
+    border-radius: 30px;
+    border: 6px solid var(--blue-400)
+}
+.projects .portfolio-heading{
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 40px;
 }
-.portfolio .section-title{
+.projects .section-title{
     color: var(--blue-100);
 }
-.portfolio .portfolio-heading h2{
+.projects .portfolio-heading h2{
     color: var(--blue-100);
     font-weight: 500;
 }
-.portfolio .portfolio-item-inner{
-    border: 6px solid var(--blue-400);
+.projects .container .project-item h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.projects .container .project-item sub,
+.projects .container .project-item div{
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--base-800);
+}
+.projects .container .project-item p{
+    margin-bottom: 10px;
+}
+.projects .container .project-item figure{
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+.projects .container .project-item figure img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   object-fit: cover;
+   transition: ease 3s all;
+}
+.projects .container .project-item figure figcaption{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: var(--base-100);
+    text-align: center;
     padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease 0.3s all;
+}
+.projects .container .project-item figure:hover figcaption{
+    opacity: 1;
+    visibility: visible;
+}
+.projects .project-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.projects .project-item{
+    border: 6px solid var(--blue-400);
+    padding: 20px;
     border-radius: 30px;
     overflow: hidden;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: translateY(-10px);
 }
-.portfolio .portfolio-item-inner img{
-    width: 100%;
-    display: block;
+@media (max-width: 1024px) {
+    .projects .container .project-item{
+        flex: 1 1 100%;
+    }
 }
 /* ====== ROW STYLES ====== */
 .row{
