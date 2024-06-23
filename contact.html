@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("C_vl6jAbV0iWKlr2a");
+            })();
+        </script>
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
@@ -34,25 +40,24 @@
                      <!-- ====== RIGHT ITEM ====== -->
                     <div class="submit-item">
                         <h4 class="submit-text">Contact Me</h4>
-                        <form action="">
+                        <form id="contact-form" onsubmit="sendEmail(); return false;">
                             <div class="input-box">
-                                <input type="text" class="input" required>
+                                <input type="text" class="input" id="name" required>
                                 <label for="">Name</label>
                             </div>
                             <div class="input-box">
-                                <input type="email" class="input" required>
+                                <input type="email" class="input" id="email" required>
                                 <label for="">Email</label>
                             </div>
                             <div class="input-box">
-                                <input type="tel" class="input" required>
+                                <input type="tel" class="input" id="phone" required>
                                 <label for="">Phone</label>
                             </div>
                             <div class="input-box">
-                                <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
+                                <textarea name="" class="input" id="message" cols="30" rows="10" required></textarea>
                                 <label for="">Message</label>
                             </div>
                             <input type="submit" value="submit" class="submitbtn">
-                        
                         </form>
                     </div>
                     
@@ -66,5 +71,6 @@
         <!-- ====== SCRIPTS ====== -->
         <script src="toggleMenu.js"></script>
         <script src="loadHeader.js"></script>
+        <script src="sendEmail.js"></script>
     </body>
 </html>
