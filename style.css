@@ -765,6 +765,13 @@ section#home p{
     border-radius: 30px;
     border: 6px solid var(--blue-400);
     z-index: 1;
+
+    h3{
+        color: #000;
+    }
+    p{
+        color: #000;
+    }
 }
 .projects .portfolio-heading{
     flex: 0 0 100%;
