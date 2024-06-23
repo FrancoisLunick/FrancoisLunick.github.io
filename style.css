@@ -772,6 +772,9 @@ section#home p{
     p{
         color: #000;
     }
+    a{
+        color: #000;
+    }
 }
 .projects .portfolio-heading{
     flex: 0 0 100%;
