@@ -91,7 +91,8 @@ header{
 }
 /* ====== FOOTER STYLES ====== */
 footer{
-    color: var(--blue-100);
+    color: var(--base-400);
+    background-color: var(--blue-400);
 }
 /* ====== DROPDOWN MENU ====== */
 .dropdown_menu{
@@ -128,7 +129,11 @@ section#home {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white
+    color: white;
+}
+
+section#home p{
+    padding: 20px;
 }
 
 .home-text {
@@ -170,7 +175,7 @@ section#home {
     }
     21%,
     40%{
-        content: "Cybersecurity";
+        content: "Cybersecurity Specialist";
     }
     41%,
     60%{
@@ -182,7 +187,7 @@ section#home {
     }
     81%,
     100%{
-        Content: "Web Developer";
+        Content: "Computer Programmer";
     }
 }
 @keyframes typing{
