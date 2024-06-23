@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     dropDownMenu.classList.toggle('open');
                     const isOpen = dropDownMenu.classList.contains('open');
                     toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+                    toggleBtnIcon.style.color = '#e2f8ff';
                 });
             } else {
                 console.log('Toggle button not found');
